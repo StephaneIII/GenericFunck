@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenericFunck
 {
-    public class Functions<T> where T : IComparable
+    public class Functions<T> where T : IComparable<T>
     {
 
 

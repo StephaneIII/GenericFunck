@@ -10,3 +10,7 @@ Console.WriteLine("Largest element in doubleList: " + Functions<double>.FindLarg
 
 List<string> stringList = new List<string>() { "apple", "banana", "orange", "kiwi" };
 Console.WriteLine("Largest element in stringList: " + Functions<string>.FindLargest(stringList)); // Output: orange
+
+
+List<Car> carList = new List<Car>() { new Car("AB43412", "Toyota", 160), new Car("CC6562", "Volvo", 200) };
+Console.WriteLine("Largest element in carList: " + Functions<Car>.FindLargest(carList)); // {Id=0, Regno=CC6562, Make=Volvo, Speed=200}
