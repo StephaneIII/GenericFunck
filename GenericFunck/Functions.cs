@@ -6,20 +6,32 @@ using System.Threading.Tasks;
 
 namespace GenericFunck
 {
-    public class Functions
+    public class Functions<T> where T : IComparable
     {
 
 
-        public static int FindLargest(List<int> listOfInt)
+        //public static int FindLargest(List<int> listOfInt)
+        //{
+        //    int LargestNumber = listOfInt[0];
+        //    foreach (int i in listOfInt)
+        //    {
+        //        if (LargestNumber < i)
+        //            LargestNumber = i;
+        //    }
+
+        //    return LargestNumber;
+
+        //}
+        public static T FindLargest(List<T> list)
         {
-            int LargestNumber = listOfInt[0];
-            foreach (int i in listOfInt)
+            T Largest = list[0];
+            foreach (T i in list)
             {
-                if (LargestNumber < i)
-                    LargestNumber = i;
+                if (Largest.CompareTo(i) < 0)
+                    Largest = i;
             }
 
-            return LargestNumber;
+            return Largest;
 
         }
 
